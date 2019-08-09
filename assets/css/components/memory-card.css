@@ -1,0 +1,15 @@
+.memory_card {
+    height: 155px;
+    width: 155px;
+    background-color: #f25a70;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+}
+
+.memory_card > .icon {
+    height: 100px;
+    width: 100px;
+}
