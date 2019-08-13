@@ -1,6 +1,7 @@
 
 const $root = document.querySelector("#root");
 const $memoryCard = document.createElement("article");
+const $memoryCardUp = document.createElement("article");
 const $iconDown = `
     <img 
         src="images/icon-collabcode.svg" 
@@ -11,16 +12,15 @@ const $iconDown = `
 const $iconUp = `
     <img
         src="images/icon-js.png" 
-        alt="Javascript" 
+        alt="Ícone de um livro de Javascript" 
         class="icon"
     />
 `
 
-$memoryCard.classList.add("memory_card", "turn_down");
-
+$memoryCard.classList.add("memory_card");
 $root.insertBefore($memoryCard, null);
-
 $memoryCard.insertAdjacentHTML("afterbegin", $iconDown);
 
-// $memoryCard.classList.add("memory_card", "turn_up");
-
+$memoryCardUp.classList.add("memory_card", "turn_up");
+$root.insertBefore($memoryCardUp, null);
+$memoryCardUp.insertAdjacentHTML("afterbegin", $iconUp);

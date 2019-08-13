@@ -9,7 +9,7 @@
     position: relative;
 }
 
-.memory_card.turn_down {
+.memory_card {
     background-color: #f25a70;
 } 
 
@@ -27,13 +27,13 @@
     margin-top: -10px;
 }
 
-.memory_card.turn_up::after {
+.memory_card.turn_up::before {
     content: '';
     position: absolute;
     height: 94px;
     width: 94px;
     bottom: 22px;
     background-color: #d4d4d4;
-    border-radius: 100px;
+    border-radius: 50%;
     z-index: 1;
 }
