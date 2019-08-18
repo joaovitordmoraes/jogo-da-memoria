@@ -8,9 +8,10 @@
     align-items: center;
     box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
     position: relative;
+    cursor: pointer;
 }
 
-.memory_card.turn_up {
+.memory_card.-turn_up {
     background-color: #ffffff;
 }
 
@@ -20,11 +21,11 @@
     z-index: 2;
 }
 
-.memory_card.turn_up > .icon {
+.memory_card.-turn_up > .icon {
     margin-top: -10px;
 }
 
-.memory_card.turn_up::before {
+.memory_card.-turn_up::before {
     content: '';
     position: absolute;
     height: 94px;
