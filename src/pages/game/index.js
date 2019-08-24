@@ -19,11 +19,16 @@ const $memoryCardPhp = createMemoryCard({
     src: "images/icon-php.png",
     alt: "Ícone de um livro de PHP"
 });
+const $memoryCardPhone = createMemoryCard({
+    estado: "-turn_up",
+    src: "images/icon-celular.png",
+    alt: "Ícone de um celular"
+});
 
 $root.insertAdjacentElement("beforeend", $cardsWrapper);
 
-$cardsWrapper.insertAdjacentHTML("beforeend", $memoryCard);
-$cardsWrapper.insertAdjacentHTML("beforeend", $memoryCard);
+$cardsWrapper.insertAdjacentHTML("beforeend", $memoryCardPhone);
+$cardsWrapper.insertAdjacentHTML("beforeend", $memoryCardPhone);
 $cardsWrapper.insertAdjacentHTML("beforeend", $memoryCardJs);
 $cardsWrapper.insertAdjacentHTML("beforeend", $memoryCardJs);
 $cardsWrapper.insertAdjacentHTML("beforeend", $memoryCardCpp);
