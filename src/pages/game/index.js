@@ -8,22 +8,18 @@ const $memoryCard = createMemoryCard({
     alt: "Gueio - mascote da CollabCode"
 });
 const $memoryCardJs = createMemoryCard({
-    estado: "-turn_up",
     src: "images/icon-js.png", 
     alt: "Ícone de um livro de JavaScript"
 });
 const $memoryCardCpp = createMemoryCard({
-    estado: "-turn_up",
     src: "images/icon-cpp.png",
     alt: "Ícone de um livro de C++"
 });
 const $memoryCardPhp = createMemoryCard({
-    estado: "-turn_up",
     src: "images/icon-php.png",
     alt: "Ícone de um livro de PHP"
 });
 const $memoryCardPhone = createMemoryCard({
-    estado: "-turn_up",
     src: "images/icon-celular.png",
     alt: "Ícone de um celular"
 });
