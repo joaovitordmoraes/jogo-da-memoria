@@ -84,14 +84,14 @@ const memoryCard = () => {
 const handleClick = $component => {
     $component.classList.toggle('-active');
 
-    let counter = document.querySelectorAll('.memory_card.-active');
-    if(counter.length > 2) {
-        $component.classList.remove('-active');
-    } else if (counter.length >= 2) {
-        setTimeout(() => {
-            for(let i = 0; i < counter.length; i++) {
-                counter[i].classList.remove('-active');           
-            }
-        }, 2000);
-    }
+    // let counter = document.querySelectorAll('.memory_card.-active');
+    // if(counter.length > 2) {
+    //     $component.classList.remove('-active');
+    // } else if (counter.length >= 2) {
+    //     setTimeout(() => {
+    //         for(let i = 0; i < counter.length; i++) {
+    //             counter[i].classList.remove('-active');           
+    //         }
+    //     }, 2000);
+    // }
 };
