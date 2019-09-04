@@ -4,11 +4,11 @@ const $cardsWrapper = createCardsWrapper();
 const createMemoryCard = memoryCard();
 
 const $memoryCard = createMemoryCard({
-    src: "images/icon-collabcode.svg", 
+    src: "images/icon-collabcode.svg",
     alt: "Gueio - mascote da CollabCode"
 });
 const $memoryCardJs = createMemoryCard({
-    src: "images/icon-js.png", 
+    src: "images/icon-js.png",
     alt: "Ícone de um livro de JavaScript"
 });
 const $memoryCardCpp = createMemoryCard({

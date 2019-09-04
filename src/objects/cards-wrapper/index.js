@@ -1,6 +1,6 @@
 let $counterMemoryCard = 0;
 
-function createCardsWrapper () {
+function createCardsWrapper() {
     const $cardsWrapper = document.createElement("section");
     $cardsWrapper.classList.add("cards-wrapper");
 
@@ -18,13 +18,13 @@ function createCardsWrapper () {
         .cards-wrapper > .memory_card {
             margin-bottom: 10px;
         }
-    `
+    `;
 
     $head.insertBefore($style, null);
 
-    $cardsWrapper.addEventListener("click", event => {
-        $counterMemoryCard = document.querySelectorAll('.memory_card.-active').length;
+    $cardsWrapper.addEventListener("click", () => {
+        $counterMemoryCard = document.querySelectorAll(".memory_card.-active").length;
     });
-    
+
     return $cardsWrapper;
 }
