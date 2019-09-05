@@ -81,37 +81,41 @@ const memoryCard = () => {
     `;
 };
 
-let score = 0;
-
 const handleClick = $component => {
     if (!$component.classList.contains("-active")) {
-        if ($counterMemoryCard < 2) {
-            $component.classList.toggle("-active");
-        }
+        activeMemoryCard($component);
 
-        if ($counterMemoryCard === 1) {
-            const $memoryCards = document.querySelectorAll(".memory_card.-active");
-            const $cardOne = $memoryCards[0].querySelector(".-turn_up .icon").getAttribute("src");
-            const $cardTwo = $memoryCards[1].querySelector(".-turn_up .icon").getAttribute("src");
-
-            if ($cardOne === $cardTwo) {
-                score++;
-                console.log(score);
-                $memoryCards.forEach($memoryCard => {
-                    $memoryCard.classList.add("-score");
-                    $memoryCard.classList.remove("-active");
-                });
-            } else {
-                setTimeout(() => {
-                    const $activeMemoryCards = document.querySelectorAll(".memory_card.-active");
-
-                    $activeMemoryCards.forEach($memoryCard => {
-                        $memoryCard.classList.remove("-active");
-                    });
-
-                    $counterMemoryCard = 0;
-                }, 1500);
-            }
-        }
+        checkIfRight();
     }
 };
+
+function activeMemoryCard($component) {
+    if (store.counterMemoryCard < 2) {
+        $component.classList.add("-active");
+    }
+}
+
+function checkIfRight() {
+    if (store.counterMemoryCard === 1) {
+        const $activeMemoryCards = document.querySelectorAll(".memory_card.-active");
+        const $cardOne = $activeMemoryCards[0].querySelector(".-turn_up .icon").getAttribute("src");
+        const $cardTwo = $activeMemoryCards[1].querySelector(".-turn_up .icon").getAttribute("src");
+
+        if ($cardOne === $cardTwo) {
+            store.score++;
+            console.log(store.score);
+            $activeMemoryCards.forEach($memoryCard => {
+                $memoryCard.classList.add("-score");
+                $memoryCard.classList.remove("-active");
+            });
+        } else {
+            setTimeout(() => {
+                $activeMemoryCards.forEach($memoryCard => {
+                    $memoryCard.classList.remove("-active");
+                });
+
+                store.counterMemoryCard = 0;
+            }, 1500);
+        }
+    }
+}
