@@ -1,5 +1,7 @@
 const memoryCard = (function() {
-    const memoryCard = () => {
+    const module = {};
+
+    module.create = () => {
         const $head = document.querySelector("head");
         const $style = document.createElement("style");
 
@@ -82,21 +84,21 @@ const memoryCard = (function() {
         `;
     };
 
-    const handleClick = $component => {
+    module.handleClick = $component => {
         if (!$component.classList.contains("-active")) {
-            activeMemoryCard($component);
+            module.activeMemoryCard($component);
 
-            checkIfRight();
+            module.checkIfRight();
         }
     };
 
-    function activeMemoryCard($component) {
+    module.activeMemoryCard = $component => {
         if (store.counterMemoryCard < 2) {
             $component.classList.add("-active");
         }
-    }
+    };
 
-    function checkIfRight() {
+    module.checkIfRight = () => {
         if (store.counterMemoryCard === 1) {
             const $activeMemoryCards = document.querySelectorAll(".memory_card.-active");
             const $cardOne = $activeMemoryCards[0].querySelector(".-turn_up .icon").getAttribute("src");
@@ -119,10 +121,10 @@ const memoryCard = (function() {
                 }, 1500);
             }
         }
-    }
+    };
 
     return {
-        new: memoryCard,
-        handleClick: handleClick
+        create: module.create,
+        handleClick: module.handleClick
     };
 })();

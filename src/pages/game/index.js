@@ -2,12 +2,8 @@
     const $root = document.querySelector("#root");
 
     const $cardsWrapper = createCardsWrapper();
-    const createMemoryCard = memoryCard.new();
+    const createMemoryCard = memoryCard.create();
 
-    const $memoryCard = createMemoryCard({
-        src: "images/icon-collabcode.svg",
-        alt: "Gueio - mascote da CollabCode"
-    });
     const $memoryCardJs = createMemoryCard({
         src: "images/icon-js.png",
         alt: "Ícone de um livro de JavaScript"
