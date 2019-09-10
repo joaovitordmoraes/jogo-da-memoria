@@ -86,19 +86,19 @@ const memoryCard = (function() {
 
     module.handleClick = $component => {
         if (!$component.classList.contains("-active")) {
-            module.activeMemoryCard($component);
+            module._activeMemoryCard($component);
 
-            module.checkIfRight();
+            module._checkIfRight();
         }
     };
 
-    module.activeMemoryCard = $component => {
+    module._activeMemoryCard = $component => {
         if (store.counterMemoryCard < 2) {
             $component.classList.add("-active");
         }
     };
 
-    module.checkIfRight = () => {
+    module._checkIfRight = () => {
         if (store.counterMemoryCard === 1) {
             const $activeMemoryCards = document.querySelectorAll(".memory_card.-active");
             const $cardOne = $activeMemoryCards[0].querySelector(".-turn_up .icon").getAttribute("src");
