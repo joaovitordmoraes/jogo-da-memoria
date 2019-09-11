@@ -6,7 +6,7 @@
 
     const $pointBar = pointBar.create();
 
-    const $gameButton = gameButton.create();
+    const $gameButton = gameButton.render();
 
     const $memoryCardJs = createMemoryCard({
         src: "images/icon-js.png",

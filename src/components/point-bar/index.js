@@ -27,7 +27,7 @@ const pointBar = (function() {
 
         return `
             <header class="point-bar">
-                Pontuação: <span class="score">0</span>
+                Pontuação: <span class="score">${store.score}</span>
             </header>
         `;
     };

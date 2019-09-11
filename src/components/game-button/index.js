@@ -7,10 +7,10 @@ const gameButton = (function() {
 
         $style.textContent = `
             .game-button {
-                position: fixed;
-                bottom: 50%;
+                position: absolute;
+                bottom: 50px;
                 left: 50%;
-                transform: translate(-50%, 0);
+                transform: translateX(-50%);
                 z-index: 2;
                 border: 4px solid #575555;
                 height: 120px;
@@ -19,6 +19,7 @@ const gameButton = (function() {
                 box-shadow: 0 0 40px 0 #000;
                 background-color: #3a4042;
                 color: #fff;
+                text-transform: uppercase;
                 font-family: 'Comfortaa', sans-serif;
                 font-weight: bold;
                 cursor: pointer;
@@ -28,16 +29,16 @@ const gameButton = (function() {
         $head.insertBefore($style, null);
     };
 
-    module.create = () => {
+    module.render = () => {
         module._style();
         return `
             <button class="game-button">
-                Iniciar Jogo
+                Start
             </button>
         `;
     };
 
     return {
-        create: module.create
+        render: module.render
     };
 })();
