@@ -6,7 +6,16 @@ const pointBar = (function() {
         const $style = document.createElement("style");
         $style.textContent = `
             .point-bar {
-                background-color: #f25a70;
+                background-color: #3a4042;
+                height: 40px;
+                text-align: center;
+                font-family: 'Comfortaa', sans-serif;
+            }
+
+            .point-bar > .score {
+                color: #ffffff;
+                line-height: 40px;
+                font-weight: bold;
             }
         `;
 
@@ -18,7 +27,7 @@ const pointBar = (function() {
 
         return `
             <header class="point-bar">
-                <span>0</span>
+                Pontuação: <span class="score">0</span>
             </header>
         `;
     };
