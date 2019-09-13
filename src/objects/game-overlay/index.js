@@ -14,8 +14,22 @@ function gameOverlay() {
             z-index: 3;
         }
 
+        .overlay.-animation {
+            animation: hideBtn 1000ms ease;
+            animation-delay: 500ms;
+        }
+
         .overlay.-hide {
             display: none;
+        }
+
+        @-webkit-keyframes hideOverlay {
+            0% {
+                opacity: 0.7;
+            }
+            100% {
+                opacity: 0;
+            }
         }
     `;
 

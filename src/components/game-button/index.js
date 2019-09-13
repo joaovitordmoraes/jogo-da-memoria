@@ -25,8 +25,21 @@ const gameButton = (function() {
                 cursor: pointer;
             }
 
+            .game-button.-animation {
+                animation: hideBtn 1000ms ease;
+            }
+
             .game-button.-hide {
                 display: none;
+            }
+
+            @-webkit-keyframes hideBtn {
+                0% {
+                    opacity: 1;
+                }
+                100% {
+                    opacity: 0;
+                }
             }
         `;
 
@@ -44,8 +57,17 @@ const gameButton = (function() {
 
     module.handleClick = $component => {
         const $overlay = document.querySelector(".overlay");
-        $overlay.classList.add("-hide");
-        $component.classList.add("-hide");
+
+        $component.classList.add("-animation");
+        $overlay.classList.add("-animation");
+
+        $component.addEventListener("animationend", () => {
+            $component.classList.add("-hide");
+        });
+
+        $overlay.addEventListener("animationend", () => {
+            $overlay.classList.add("-hide");
+        });
     };
 
     return {
