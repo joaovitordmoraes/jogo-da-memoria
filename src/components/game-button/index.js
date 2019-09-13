@@ -11,7 +11,7 @@ const gameButton = (function() {
                 bottom: 50px;
                 left: 50%;
                 transform: translateX(-50%);
-                z-index: 2;
+                z-index: 4;
                 border: 4px solid #575555;
                 height: 120px;
                 width: 120px;
