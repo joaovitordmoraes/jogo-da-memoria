@@ -13,6 +13,10 @@ function gameOverlay() {
             height: 100%;
             z-index: 3;
         }
+
+        .overlay.-hide {
+            display: none;
+        }
     `;
 
     $head.insertBefore($style, null);

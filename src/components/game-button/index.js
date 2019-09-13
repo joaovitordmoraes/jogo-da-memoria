@@ -24,6 +24,10 @@ const gameButton = (function() {
                 font-weight: bold;
                 cursor: pointer;
             }
+
+            .game-button.-hide {
+                display: none;
+            }
         `;
 
         $head.insertBefore($style, null);
@@ -32,13 +36,20 @@ const gameButton = (function() {
     module.render = () => {
         module._style();
         return `
-            <button class="game-button">
+            <button class="game-button" onClick="gameButton.handleClick(this)">
                 Start
             </button>
         `;
     };
 
+    module.handleClick = $component => {
+        const $overlay = document.querySelector(".overlay");
+        $overlay.classList.add("-hide");
+        $component.classList.add("-hide");
+    };
+
     return {
-        render: module.render
+        render: module.render,
+        handleClick: module.handleClick
     };
 })();
