@@ -23,23 +23,15 @@ const gameButton = (function() {
                 font-family: 'Comfortaa', sans-serif;
                 font-weight: bold;
                 cursor: pointer;
+                transition: opacity 300ms ease-out;
             }
 
             .game-button.-animation {
-                animation: hideBtn 1000ms ease;
+                opacity: 0;
             }
 
             .game-button.-hide {
                 display: none;
-            }
-
-            @-webkit-keyframes hideBtn {
-                0% {
-                    opacity: 1;
-                }
-                100% {
-                    opacity: 0;
-                }
             }
         `;
 
@@ -55,23 +47,7 @@ const gameButton = (function() {
         `;
     };
 
-    module.handleClick = $component => {
-        const $overlay = document.querySelector(".overlay");
-
-        $component.classList.add("-animation");
-        $overlay.classList.add("-animation");
-
-        $component.addEventListener("animationend", () => {
-            $component.classList.add("-hide");
-        });
-
-        $overlay.addEventListener("animationend", () => {
-            $overlay.classList.add("-hide");
-        });
-    };
-
     return {
-        render: module.render,
-        handleClick: module.handleClick
+        render: module.render
     };
 })();

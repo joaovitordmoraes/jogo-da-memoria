@@ -12,24 +12,15 @@ const gameOverlay = (function() {
                 width: 100vw;
                 height: 100vh;
                 z-index: 3;
+                transition: opacity 300ms 300ms ease-out;
             }
 
             .game-overlay.-animation {
-                animation: hideBtn 1000ms ease;
-                animation-delay: 500ms;
+                opacity: 0;
             }
 
             .game-overlay.-hide {
                 display: none;
-            }
-
-            @-webkit-keyframes hideOverlay {
-                0% {
-                    opacity: 0.7;
-                }
-                100% {
-                    opacity: 0;
-                }
             }
     `;
 
