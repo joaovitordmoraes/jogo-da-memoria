@@ -23,15 +23,12 @@ const gameButton = (function() {
                 font-family: 'Comfortaa', sans-serif;
                 font-weight: bold;
                 cursor: pointer;
-                transition: opacity 300ms ease-out;
+                transition: opacity 300ms linear, transform 300ms linear;
             }
 
             .game-button.-animation {
                 opacity: 0;
-            }
-
-            .game-button.-hide {
-                display: none;
+                transform: translate(-50%, -35%) scale(2);
             }
         `;
 
