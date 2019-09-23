@@ -1,17 +1,14 @@
 (function() {
     const $root = document.querySelector("#root");
 
-    $root.insertAdjacentHTML(
-        "beforeend",
-        flatButton.render({
-            text: "Login",
-            status: "-active"
-        })
-    );
-    $root.insertAdjacentHTML(
-        "beforeend",
-        flatButton.render({
-            text: "Signup"
-        })
-    );
+    const $loginButton = flatButton.render({
+        text: "Login"
+    });
+    const $signupButton = flatButton.render({
+        text: "Signup",
+        active: true
+    });
+
+    $root.insertAdjacentHTML("beforeend", $loginButton);
+    $root.insertAdjacentHTML("beforeend", $signupButton);
 })();
