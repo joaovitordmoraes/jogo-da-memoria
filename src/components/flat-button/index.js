@@ -16,16 +16,20 @@ const flatButton = (function() {
                 height: 176px;
                 float: left;
             }
+
+            .flat-button.-active {
+                background-color: #f25a70;
+            }
         `;
 
         $head.insertBefore($style, null);
     };
 
-    module.render = $text => {
+    module.render = ({ text, status }) => {
         module._style();
 
         return `
-            <button class="flat-button">${$text}</button>
+            <button class="flat-button ${status}">${text}</button>
         `;
     };
 
