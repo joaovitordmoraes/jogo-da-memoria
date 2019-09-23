@@ -21,11 +21,11 @@ const flatButton = (function() {
         $head.insertBefore($style, null);
     };
 
-    module.render = () => {
+    module.render = $text => {
         module._style();
 
         return `
-            <button class="flat-button">Login</button>
+            <button class="flat-button">${$text}</button>
         `;
     };
 
