@@ -11,6 +11,10 @@ const logoCollabCode = (function() {
                 padding: 40px 40px 30px 40px;
                 border-radius: 50%;
                 display: inline-block;
+                position: relative;
+                left: 50%;
+                transform: translateX(-50%);
+                margin-top: -75px;
             }
 
             .logo-collabcode > .icon {
