@@ -10,8 +10,10 @@
     });
 
     const $logoCollab = logoCollabCode.render();
+    const $titleCollab = titleCollabCode.render("Welcome!");
 
     $root.insertAdjacentHTML("beforeend", $loginButton);
     $root.insertAdjacentHTML("beforeend", $signupButton);
     $root.insertAdjacentHTML("beforeend", $logoCollab);
+    $root.insertAdjacentHTML("beforeend", $titleCollab);
 })();
