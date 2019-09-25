@@ -16,12 +16,11 @@ const flatButton = (function() {
                 text-transform: uppercase;
                 width: 50%;
                 height: 176px;
+                display: inline-flex;
+                justify-content: center;
+                box-sizing: border-box;
+                padding-top: 60px;
                 float: left;
-            }
-
-            .flat-button.-active {
-                background-color: #f25a70;
-                color: #ffffff;
             }
         `;
 

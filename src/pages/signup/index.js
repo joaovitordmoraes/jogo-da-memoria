@@ -9,6 +9,9 @@
         active: true
     });
 
+    const $logoCollab = logoCollabCode.render();
+
     $root.insertAdjacentHTML("beforeend", $loginButton);
     $root.insertAdjacentHTML("beforeend", $signupButton);
+    $root.insertAdjacentHTML("beforeend", $logoCollab);
 })();
