@@ -13,12 +13,11 @@
     const $logoCollab = logoCollabCode.render();
     const $titleCollab = titleCollabCode.render("Welcome!");
 
-    const $logoWrapper = logoWrapper.render($logoCollab);
+    const $logoWrapper = logoWrapper.render($logoCollab, $titleCollab);
 
     console.log($logoWrapper);
 
     $root.insertAdjacentHTML("beforeend", $loginButton);
     $root.insertAdjacentHTML("beforeend", $signupButton);
     $root.insertAdjacentHTML("beforeend", $logoWrapper);
-    $root.insertAdjacentHTML("beforeend", $titleCollab);
 })();

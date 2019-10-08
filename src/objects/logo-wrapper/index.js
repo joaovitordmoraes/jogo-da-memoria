@@ -1,10 +1,26 @@
 const logoWrapper = (function() {
     const module = {};
 
-    module._style = () => {};
+    module._style = () => {
+        const $head = document.querySelector("head");
+        const $style = document.createElement("style");
 
-    module.render = $children => {
-        return `<div class="logo-wrapper">${$children}</div>`;
+        $style.textContent = `
+            .logo-wrapper {
+                text-align: center;
+                transform: translateY(-15%);
+            }
+        `;
+
+        $head.insertBefore($style, null);
+    };
+
+    module.render = (...$children) => {
+        module._style();
+
+        return `<div class="logo-wrapper">
+                    ${$children.join("")}
+                </div>`;
     };
 
     return {

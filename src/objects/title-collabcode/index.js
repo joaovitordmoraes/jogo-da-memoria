@@ -7,7 +7,6 @@ const titleCollabCode = (function() {
 
         $style.textContent = `
             .title-collabcode {
-                text-align: center;
                 text-transform: uppercase;
                 font-size: 24px;
                 font-weight: bold;

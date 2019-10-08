@@ -8,17 +8,13 @@ const logoCollabCode = (function() {
         $style.textContent = `
             .logo-collabcode {
                 background-color: #ffffff;
-                padding: 40px 40px 30px 40px;
-                border-radius: 50%;
                 display: inline-block;
-                position: relative;
-                left: 50%;
-                transform: translateX(-50%);
-                margin-top: -75px;
+                border: 35px solid #ffffff;
+                border-radius: 50%;
             }
 
-            .logo-collabcode > .icon {
-                max-width: 171px;
+            .logo-collabcode > .logo {
+                width: 130px;
             }
         `;
 
@@ -29,9 +25,9 @@ const logoCollabCode = (function() {
         module._style();
 
         return `
-            <div class="logo-collabcode">
-                <img src="images/icon-collabcode.svg" alt="Ícone do Gueio, o mascote da Collab Code" class="icon">
-            </div>
+            <figure class="logo-collabcode">
+                <img src="images/icon-collabcode.svg" alt="Ícone do Gueio, o mascote da Collab Code" class="logo">
+            </figure>
         `;
     };
 
