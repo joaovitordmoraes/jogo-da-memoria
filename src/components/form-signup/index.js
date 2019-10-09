@@ -40,3 +40,10 @@ const formSignup = (function() {
         render: module.render
     };
 })();
+
+// Exemplo de validação de e-mail
+const regexEmail = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
+
+const email = regexEmail.exec("teste@teste.com.br");
+
+console.log(email);
