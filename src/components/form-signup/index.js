@@ -17,10 +17,10 @@ const formSignup = (function() {
 
     module._children = () => {
         const $labelUserCollab = labelCollab.render("Username");
-        const $inputUserCollab = inputCollabcode.render("text");
+        const $inputUserCollab = inputCollabcode.render("text", "Lorem Ipsum");
 
         const $labelEmailCollab = labelCollab.render("E-mail");
-        const $inputEmailCollab = inputCollabcode.render("email");
+        const $inputEmailCollab = inputCollabcode.render("email", "example@email.com");
 
         const $labelPasswordCollab = labelCollab.render("Password");
         const $inputPasswordCollab = inputCollabcode.render("password");
