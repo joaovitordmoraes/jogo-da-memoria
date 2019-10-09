@@ -12,6 +12,7 @@ const inputCollabcode = (function() {
                 font-weight: bold;
                 font-family: 'Comfortaa', sans-serif;
                 padding: 12px 0;
+                margin-bottom: 28px;
                 width: 100%;
             }
         `;
