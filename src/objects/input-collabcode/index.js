@@ -1,4 +1,4 @@
-const logoWrapper = (function() {
+const inputCollabcode = (function() {
     const module = {};
 
     module._style = () => {
@@ -6,23 +6,23 @@ const logoWrapper = (function() {
         const $style = document.createElement("style");
 
         $style.textContent = `
-            .logo-wrapper {
-                text-align: center;
-                transform: translateY(-25%);
+            .input-collabcode {
+                border-bottom: 1px solid rgba(58,64,66,.5);
+                font-size: 18px;
+                font-weight: bold;
+                font-family: 'Comfortaa', sans-serif;
+                padding: 12px 0;
                 width: 100%;
-                float: left;
             }
         `;
 
         $head.insertBefore($style, null);
     };
 
-    module.render = (...$children) => {
+    module.render = () => {
         module._style();
 
-        return `<div class="logo-wrapper">
-                    ${$children.join("")}
-                </div>`;
+        return `<input class="input-collabcode" type="email" />`;
     };
 
     return {

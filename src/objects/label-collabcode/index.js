@@ -1,4 +1,4 @@
-const logoWrapper = (function() {
+const labelCollab = (function() {
     const module = {};
 
     module._style = () => {
@@ -6,23 +6,23 @@ const logoWrapper = (function() {
         const $style = document.createElement("style");
 
         $style.textContent = `
-            .logo-wrapper {
-                text-align: center;
-                transform: translateY(-25%);
-                width: 100%;
-                float: left;
+            .label-collabcode {
+                font-family: 'Comfortaa', sans-serif;
+                font-size: 16px;
+                color: #3a4042;
+                opacity: .5;
             }
         `;
 
         $head.insertBefore($style, null);
     };
 
-    module.render = (...$children) => {
+    module.render = content => {
         module._style();
 
-        return `<div class="logo-wrapper">
-                    ${$children.join("")}
-                </div>`;
+        return `
+            <label class="label-collabcode">${content}</label>
+        `;
     };
 
     return {

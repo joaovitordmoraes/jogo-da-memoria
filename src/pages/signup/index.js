@@ -15,10 +15,12 @@
 
     const $logoWrapper = logoWrapper.render($logoCollab, $titleCollab);
 
-    const $formSignup = formSignup.render();
+    const $labelCollab = labelCollab.render("E-mail");
+    const $inputCollab = inputCollabcode.render();
 
     $root.insertAdjacentHTML("beforeend", $loginButton);
     $root.insertAdjacentHTML("beforeend", $signupButton);
     $root.insertAdjacentHTML("beforeend", $logoWrapper);
-    $root.insertAdjacentHTML("beforeend", $formSignup);
+    $root.insertAdjacentHTML("beforeend", $labelCollab);
+    $root.insertAdjacentHTML("beforeend", $inputCollab);
 })();
