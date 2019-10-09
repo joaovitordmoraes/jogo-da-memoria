@@ -19,10 +19,10 @@ const inputCollabcode = (function() {
         $head.insertBefore($style, null);
     };
 
-    module.render = () => {
+    module.render = content => {
         module._style();
 
-        return `<input class="input-collabcode" type="email" />`;
+        return `<input class="input-collabcode" type="${content}" />`;
     };
 
     return {
