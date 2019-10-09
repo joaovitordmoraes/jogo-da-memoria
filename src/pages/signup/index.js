@@ -15,9 +15,10 @@
 
     const $logoWrapper = logoWrapper.render($logoCollab, $titleCollab);
 
-    console.log($logoWrapper);
+    const $formSignup = formSignup.render();
 
     $root.insertAdjacentHTML("beforeend", $loginButton);
     $root.insertAdjacentHTML("beforeend", $signupButton);
     $root.insertAdjacentHTML("beforeend", $logoWrapper);
+    $root.insertAdjacentHTML("beforeend", $formSignup);
 })();
