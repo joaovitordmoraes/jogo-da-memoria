@@ -15,6 +15,11 @@ const buttonCollabCode = (function() {
                 color: #ffffff;
                 letter-spacing: 0.34px;
                 text-transform: uppercase;
+                cursor: pointer;
+            }
+
+            .input-collabcode + .button-collabcode {
+                margin-top: 45px;
             }
         `;
 
@@ -24,7 +29,7 @@ const buttonCollabCode = (function() {
     module.render = (content = "Parâmetro não passado") => {
         module._style();
 
-        return `<button class="button-collabcode">${content}</button>`;
+        return `<button type="submit" class="button-collabcode">${content}</button>`;
     };
 
     return {

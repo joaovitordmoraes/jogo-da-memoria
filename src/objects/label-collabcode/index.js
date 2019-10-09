@@ -11,6 +11,7 @@ const labelCollab = (function() {
                 font-size: 16px;
                 color: #3a4042;
                 opacity: .5;
+                display: block;
             }
         `;
 
