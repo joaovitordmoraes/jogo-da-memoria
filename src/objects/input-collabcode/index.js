@@ -23,10 +23,10 @@ const inputCollabcode = (function() {
         $head.insertBefore($style, null);
     };
 
-    module.render = (content, placecholder = "") => {
+    module.render = (content, placeholder = "") => {
         module._style();
 
-        return `<input class="input-collabcode" type="${content}" placeholder="${placecholder}" />`;
+        return `<input class="input-collabcode" type="${content}" placeholder="${placeholder}" />`;
     };
 
     return {
