@@ -13,19 +13,25 @@ const eyeCollabcode = (function() {
                 background-repeat: no-repeat;
                 height: 15px;
                 width: 23px;
+                cursor: pointer;
             }
         `;
 
         $head.insertBefore($style, null);
     };
 
+    module.handleClick = () => {
+        console.log("ae");
+    };
+
     module.render = () => {
         module._style();
 
-        return `<label class="eye-collabcode">Mostrar senha</label>`;
+        return `<label class="eye-collabcode" onClick="eyeCollabcode.handleClick();">Mostrar senha</label>`;
     };
 
     return {
-        render: module.render
+        render: module.render,
+        handleClick: module.handleClick
     };
 })();
