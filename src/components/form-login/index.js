@@ -28,6 +28,8 @@ const formLogin = (function() {
             placeholder: "******"
         });
 
+        const $eyeCollab = eyeCollabcode.render();
+
         const $forgetPassword = forgetPassword.render({
             content: "Forget password?"
         });
@@ -39,6 +41,7 @@ const formLogin = (function() {
             ${$inputUserCollab}
             ${$labelPasswordCollab}
             ${$inputPasswordCollab}
+            ${$eyeCollab}
             ${$forgetPassword}
             ${$buttonCollab}
         `;
