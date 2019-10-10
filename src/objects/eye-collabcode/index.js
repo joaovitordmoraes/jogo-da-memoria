@@ -20,8 +20,11 @@ const eyeCollabcode = (function() {
         $head.insertBefore($style, null);
     };
 
-    module.handleClick = () => {
-        console.log("ae");
+    module.handleClick = $component => {
+        const attrFor = $component.getAttribute("for");
+        const $input = document.querySelector(`#${attrFor}`);
+
+        $input.setAttribute("type", "text");
     };
 
     module.render = ({ attrFor = "" }) => {
@@ -31,7 +34,7 @@ const eyeCollabcode = (function() {
             <label 
                 for="${attrFor}"
                 class="eye-collabcode" 
-                onClick="eyeCollabcode.handleClick();"
+                onClick="eyeCollabcode.handleClick(this);"
             >
             Mostrar senha
             </label>
