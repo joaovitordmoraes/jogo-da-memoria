@@ -5,7 +5,16 @@ const eyeCollabcode = (function() {
         const $head = document.querySelector("head");
         const $style = document.createElement("style");
 
-        $style.textContent = ``;
+        $style.textContent = `
+            .eye-collabcode {
+                display: block;
+                text-indent: -9999px;
+                background-image: url('/images/eye-hidden.png');
+                background-repeat: no-repeat;
+                height: 15px;
+                width: 23px;
+            }
+        `;
 
         $head.insertBefore($style, null);
     };
@@ -13,7 +22,7 @@ const eyeCollabcode = (function() {
     module.render = () => {
         module._style();
 
-        return `<label>Mostrar senha</label>`;
+        return `<label class="eye-collabcode">Mostrar senha</label>`;
     };
 
     return {
