@@ -12,9 +12,6 @@ const forgetPassword = (function() {
                 text-decoration: none;
                 width: 100%;
                 display: block;
-            }
-
-            .input-collabcode + .forget-password {
                 margin: 40px 0 60px 0;
                 text-align: right;
             }

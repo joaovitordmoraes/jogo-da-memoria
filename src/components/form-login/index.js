@@ -9,6 +9,7 @@ const formLogin = (function() {
             .form-login {
                 float: left;
                 padding: 0 35px 40px 35px;
+                position: relative;
             }
         `;
 
