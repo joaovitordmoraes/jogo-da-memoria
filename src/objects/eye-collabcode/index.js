@@ -24,12 +24,12 @@ const eyeCollabcode = (function() {
         console.log("ae");
     };
 
-    module.render = () => {
+    module.render = ({ attrFor = "" }) => {
         module._style();
 
         return `
             <label 
-                for="password"
+                for="${attrFor}"
                 class="eye-collabcode" 
                 onClick="eyeCollabcode.handleClick();"
             >

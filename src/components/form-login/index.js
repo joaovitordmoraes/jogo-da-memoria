@@ -25,10 +25,13 @@ const formLogin = (function() {
         const $labelPasswordCollab = labelCollab.render("Password");
         const $inputPasswordCollab = inputCollabcode.render({
             type: "password",
-            placeholder: "******"
+            placeholder: "******",
+            id: "password"
         });
 
-        const $eyeCollab = eyeCollabcode.render();
+        const $eyeCollab = eyeCollabcode.render({
+            attrFor: "password"
+        });
 
         const $forgetPassword = forgetPassword.render({
             content: "Forget password?"
