@@ -23,10 +23,10 @@ const forgetPassword = (function() {
         $head.insertBefore($style, null);
     };
 
-    module.render = content => {
+    module.render = ({ content, href }) => {
         module._style();
 
-        return `<a href="#" class="forget-password">${content}</a>`;
+        return `<a href="${href}" class="forget-password">${content}</a>`;
     };
 
     return {

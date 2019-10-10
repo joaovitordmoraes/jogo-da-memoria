@@ -27,7 +27,9 @@ const formLogin = (function() {
             placeholder: "******"
         });
 
-        const $forgetPassword = forgetPassword.render("Forget password?");
+        const $forgetPassword = forgetPassword.render({
+            content: "Forget password?"
+        });
 
         const $buttonCollab = buttonCollabCode.render("Login");
 
