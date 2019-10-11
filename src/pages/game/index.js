@@ -1,4 +1,4 @@
-(function() {
+const game = function() {
     const $root = document.querySelector("#root");
 
     const $cardsWrapper = createCardsWrapper();
@@ -36,4 +36,4 @@
     $cardsWrapper.insertAdjacentHTML("beforeend", $memoryCardCpp);
     $cardsWrapper.insertAdjacentHTML("beforeend", $memoryCardPhp);
     $cardsWrapper.insertAdjacentHTML("beforeend", $memoryCardPhp);
-})();
+};
