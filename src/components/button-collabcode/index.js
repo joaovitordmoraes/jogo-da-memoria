@@ -29,6 +29,7 @@ const buttonCollabCode = (function() {
     module.handleClick = (event, path) => {
         event.preventDefault();
         window.location.hash = `#/${path}`;
+        window.location.reload(true);
     };
 
     module.render = ({ content = "Parâmetro não passado", path = "" }) => {
