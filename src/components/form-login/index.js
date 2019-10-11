@@ -37,7 +37,10 @@ const formLogin = (function() {
             content: "Forget password?"
         });
 
-        const $buttonCollab = buttonCollabCode.render("Login");
+        const $buttonCollab = buttonCollabCode.render({
+            content: "Login",
+            path: "game"
+        });
 
         return `
             ${$labelUserCollab}

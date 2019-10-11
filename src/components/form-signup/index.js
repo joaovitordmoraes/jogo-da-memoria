@@ -39,7 +39,10 @@ const formSignup = (function() {
             placeholder: "******"
         });
 
-        const $buttonCollab = buttonCollabCode.render("Submit");
+        const $buttonCollab = buttonCollabCode.render({
+            content: "Submit",
+            path: "login"
+        });
 
         return `
             ${$labelUserCollab}

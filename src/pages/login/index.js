@@ -3,11 +3,13 @@ const login = function() {
 
     const $loginButton = flatButton.render({
         text: "Login",
-        active: true
+        active: true,
+        path: "login"
     });
     const $signupButton = flatButton.render({
         text: "Signup",
-        active: false
+        active: false,
+        path: "signup"
     });
 
     const $logoCollab = logoCollabCode.render();

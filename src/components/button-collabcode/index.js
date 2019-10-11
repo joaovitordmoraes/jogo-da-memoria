@@ -26,13 +26,23 @@ const buttonCollabCode = (function() {
         $head.insertBefore($style, null);
     };
 
-    module.render = (content = "Parâmetro não passado") => {
+    module.handleClick = (event, path) => {
+        event.preventDefault();
+        window.location.hash = `#/${path}`;
+    };
+
+    module.render = ({ content = "Parâmetro não passado", path = "" }) => {
         module._style();
 
-        return `<button type="submit" class="button-collabcode">${content}</button>`;
+        return `<button 
+                        type="submit" 
+                        class="button-collabcode"
+                        onclick="buttonCollabCode.handleClick(event, '${path}');"
+                        >${content}</button>`;
     };
 
     return {
-        render: module.render
+        render: module.render,
+        handleClick: module.handleClick
     };
 })();

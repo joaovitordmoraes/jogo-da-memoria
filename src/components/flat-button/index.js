@@ -22,22 +22,32 @@ const flatButton = (function() {
                 padding-top: 60px;
                 float: left;
                 text-decoration: none;
+                cursor: pointer;
             }
         `;
 
         $head.insertBefore($style, null);
     };
 
-    module.render = ({ text = "Sem parâmetro", active = false }) => {
+    module.handleClick = path => {
+        console.log(path);
+        window.location.hash = `#/${path}`;
+    };
+
+    module.render = ({ text = "Sem parâmetro", active = false, path = "" }) => {
         module._id++;
         module._style(active);
 
         return `
-            <a href="#" class="flat-button-${module._id}">${text}</a>
+            <a  
+                onclick="flatButton.handleClick('${path}');" 
+                class="flat-button-${module._id}"
+                >${text}</a>
         `;
     };
 
     return {
-        render: module.render
+        render: module.render,
+        handleClick: module.handleClick
     };
 })();
