@@ -26,7 +26,7 @@ const buttonCollabCode = (function() {
         $head.insertBefore($style, null);
     };
 
-    module.handleClick = (event, path) => {
+    module.handleClick = (event, path, component) => {
         event.preventDefault();
         window.location.hash = `#/${path}`;
         window.location.reload(true);
@@ -36,9 +36,9 @@ const buttonCollabCode = (function() {
         module._style();
 
         return `<button 
-                        type="submit" 
+                        type="button" 
                         class="button-collabcode"
-                        onclick="buttonCollabCode.handleClick(event, '${path}');"
+                        onclick="buttonCollabCode.handleClick(event, '${path}', this);"
                         >${content}</button>`;
     };
 

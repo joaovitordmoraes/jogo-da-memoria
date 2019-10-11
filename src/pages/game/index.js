@@ -39,6 +39,4 @@ const game = function() {
     $cardsWrapper.insertAdjacentHTML("beforeend", $memoryCardPhp);
 
     $root.insertAdjacentHTML("beforeend", $buttonWrapper);
-
-    $root.insertAdjacentHTML("beforeend", $returnButton);
 };
